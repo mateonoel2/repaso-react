@@ -1,50 +1,46 @@
-# React + TypeScript + Vite
+# Proyecto Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Requisitos
 
-Currently, two official plugins are available:
+- Node.js
+- npm
+- IntelliJ IDEA
+- Spring Boot
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instrucciones para correr el proyecto
 
-## Expanding the ESLint configuration
+### 1. Clonar el repositorio del backend
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Primero, clona el repositorio del backend desde GitHub:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```sh
+git clone https://github.com/CS2031-DBP/lab-week9-backend
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2. Correr el backend
+Abre el proyecto del backend en IntelliJ IDEA y corre la aplicación usando Spring Boot. Asegúrate de que el backend esté corriendo correctamente antes de continuar.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### 3. Clonar este repositorio
+Clona este repositorio en tu máquina local:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```sh
+git clone https://github.com/mateonoel2/repaso-react
 ```
+
+### 4. Instalar dependencias
+Navega al directorio del proyecto y ejecuta el siguiente comando para instalar las dependencias:
+
+```
+npm install
+```
+
+### 5. Correr el proyecto
+Finalmente, corre el proyecto con el siguiente comando:
+
+```
+npm run dev
+```
+
+Esto debería iniciar el servidor de desarrollo y abrir la aplicación en tu navegador predeterminado.
+
+¡Listo! Ahora deberías tener tanto el backend como el frontend corriendo en tu máquina local.
